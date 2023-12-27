@@ -1,0 +1,106 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdint.h>
+uint32_t* DC;
+int *t;
+
+uint32_t time[37] ={1,625,1262,1822,2255,2859,3316,3760,4416,5095,5670,6334,6734,7318,7876,8517,9066,9638,10260,10734,11159,11757,12425,13056,13735,14140,14799,15453,16019,16428,16937,17484,17921,18365,18777,19261,19870};
+uint32_t input[37] ={83, 32, 9, 14,50,50,5,56,70,82,99,87,99,48,23,90,85,59,67,63,73,98,58,58,12,48,21,63,61,5,19,21,19,64,54,50,45};
+
+uint32_t *ptr_time = time;
+uint32_t *ptr_input = input;
+
+int main()
+{
+    for(int i = 0;i<=20001;i++){
+        t = &i;
+        if (*t == 1)
+    			{
+    			DC = ptr_input;
+    			ptr_input++;
+    			ptr_time++;
+    			}
+    		else if (*t == *ptr_time)
+    			{
+    			DC = ptr_input;
+    			ptr_input++;
+    			ptr_time++;
+    		}
+    		else if(ptr_time == NULL && *t == 20000)
+    		{
+    			DC = 0;
+    		}
+    		DC = 0;
+    	printf("%p\n",*DC);
+    	
+    }
+
+}
+
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+
+uint32_t *DC;
+
+
+int *t;
+
+uint32_t time[37] ={1,625,1262,1822,2255,2859,3316,3760,4416,5095,5670,6334,6734,7318,7876,8517,9066,9638,10260,10734,11159,11757,12425,13056,13735,14140,14799,15453,16019,16428,16937,17484,17921,18365,18777,19261,19870};
+uint32_t input[37] ={83, 32, 9, 14,50,50,5,56,70,82,99,87,99,48,23,90,85,59,67,63,73,98,58,58,12,48,21,63,61,5,19,21,19,64,54,50,45};
+
+uint32_t *ptr_time = time;
+uint32_t *ptr_input = input;
+
+int main()
+{
+    DC = 0;
+    printf("%i\n",*(ptr_input));
+    printf("%i\n",*(ptr_time));
+    printf("%i\n",DC);
+    
+    for(int i = 0;i<=20200;i++){
+        t = &i;
+       
+        if (*t == 1)
+    			{
+    			DC = *ptr_input;
+    			ptr_input++;
+    			ptr_time++;
+    			}
+    		else if (*t == *ptr_time)
+    			{
+    			DC = *ptr_input;
+    			ptr_input++;
+    			ptr_time++;
+    			
+    		}
+    		else if(*t >= 20001)
+    		{
+    			DC = 0;
+    		}
+    	 printf("DC:%i\n",DC);
+    	 printf("time:%i\n",*t);
+    }
+    // printf("DC:%i\n",DC);
+    //printf("input:%i\n",*(ptr_input));
+    //printf("time:%i\n",*(ptr_time));
+
+}
+
